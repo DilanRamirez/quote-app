@@ -79,7 +79,7 @@ const Header = () => {
       <div className="icon-title">
         <FaAngleLeft
           className="back-icon"
-          onClick={() => (window.location.href = "/")}
+          onClick={() => (window.location.href = "/quote-app/")}
         />
         <h4>Your Quotes</h4>
       </div>
@@ -97,8 +97,8 @@ function App() {
     <Router>
       <div className="App">
         <div className="welcome">
-          <Route path="/" exact component={Welcome} />
-          <Route path="/Quotes" exact component={Home} />
+          <Route path="/quote-app/" exact component={Welcome} />
+          <Route path="/quote-app/Quotes" exact component={Home} />
         </div>
       </div>
     </Router>
