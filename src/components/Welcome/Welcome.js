@@ -27,9 +27,8 @@ export default function Welcome() {
             width: "8rem",
             borderRadius: "1rem",
           }}
-          onClick={() => (window.location.href = "Quotes")}
         >
-          Start
+          <Link to="/Quotes">Start</Link>
         </Button>
       </Container>
     </div>

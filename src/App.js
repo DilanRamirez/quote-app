@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Container, Form, Image } from "react-bootstrap";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  HashRouter,
+  Link,
+} from "react-router-dom";
 import { FaAngleLeft } from "react-icons/fa";
 import "./App.css";
 
@@ -94,14 +99,14 @@ const Header = () => {
 
 function App() {
   return (
-    <Router>
+    <HashRouter basename="/">
       <div className="App">
         <div className="welcome">
-          <Route path="/quote-app/" exact component={Welcome} />
-          <Route path="/quote-app/Quotes" exact component={Home} />
+          <Route path="/" exact component={Welcome} />
+          <Route path="/Quotes" component={Home} />
         </div>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
